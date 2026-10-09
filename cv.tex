@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage[a4paper,top=1.2cm,bottom=1.2cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Vincent Yongky Pratama - Curriculum Vitae},
+  pdfauthor={Vincent Yongky Pratama},
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.3em,itemsep=0pt,topsep=1pt,parsep=0pt}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{3pt}%
+  {\large\bfseries #1}\par\vspace{1pt}%
+  \hrule height 0.6pt\vspace{2pt}%
+}
+
+\newcommand{\cventry}[4]{%
+  \textbf{#1} --- #2 \hfill \textit{#4}\par
+  {\small #3}\par
+}
+
+\newcommand{\projentry}[3]{%
+  \textbf{#1} \hfill \textit{#3}\par
+  {\small #2}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{20}{24}\selectfont\bfseries Vincent Yongky Pratama}\\[3pt]
+  {\normalsize Information Technology Student --- DevOps \& Backend}\\[3pt]
+  {\small
+  Batam, Indonesia $\cdot$ +62 812-6694-0976 $\cdot$
+  \href{mailto:izayoilv@gmail.com}{izayoilv@gmail.com}\\
+  \href{https://www.linkedin.com/in/vincent-yongky-pratama-7485a235a}{linkedin.com/in/vincent-yongky-pratama-7485a235a} $\cdot$
+  \href{https://github.com/izayoilv}{github.com/izayoilv}}
+\end{center}
+
+\cvsection{Summary}
+
+Information Technology student (3rd term, GPA 3.70/4.00) building
+production systems: a self-hosted Kubernetes platform (Flux, OpenTofu,
+OpenBao), Rust and Go backends, and full-stack web applications. Seeking a
+DevOps or backend internship or junior role --- remote or on-site in Batam.
+
+\cvsection{Skills}
+
+\textbf{Languages:} Rust, Go, Python, TypeScript, JavaScript, PHP, Kotlin, SQL, Bash\\
+\textbf{Backend:} Axum, Chi, Express, Apollo GraphQL, Laravel, REST APIs, GraphQL\\
+\textbf{DevOps \& Infrastructure:} Linux, Docker, Podman, Kubernetes (k3s), Flux CD (GitOps), OpenTofu, OpenBao, Woodpecker CI, GitHub Actions, Cloudflare (Tunnel, DNS), WireGuard/NetBird, KVM/libvirt, Grafana, VictoriaMetrics\\
+\textbf{Databases:} MySQL, MongoDB, SQLite
+
+\cvsection{Experience}
+
+\cventry{Web \& Infrastructure Developer (Volunteer)}{INTI Kepri (Indonesian Chinese Association)}{Batam, Indonesia}{Sep 2025 -- Present}
+\begin{itemize}
+  \item Operate \href{https://intikepri.com}{intikepri.com} end to end: a Rust (Axum) CMS with OpenBao-issued Ed25519 JWTs, a Next.js static frontend, and MySQL/SQLite persistence.
+  \item Deploy and run the services on a self-hosted k3s cluster delivered as GitOps: OpenTofu for Cloudflare DNS and tunnel, Flux CD for reconciliation, Woodpecker CI for builds.
+\end{itemize}
+
+\cventry{Freelance Full-Stack Developer}{Maha Giri Buddha Temple}{Batam, Indonesia}{Aug 2026 -- Sep 2026}
+\begin{itemize}
+  \item Built a headless CMS (Laravel 13, Filament, versioned JSON:API) and a Next.js static website consuming it.
+  \item Delivered the source code and deployment setup to the temple's IT team for continued development.
+\end{itemize}
+
+\cventry{Event Operations \& Sound Technician (Freelance)}{Community and cultural events}{Batam, Indonesia}{2023 -- 2025}
+
+\cvsection{Projects}
+
+\projentry{kudofools-infra}{Self-hosted Kubernetes platform --- single-node k3s on a Raspberry Pi 5 plus a Vultr VPS}{2026 -- Present}
+\begin{itemize}
+  \item Delivers 10+ services with GitOps: Flux CD, OpenTofu controllers, OpenBao secrets via External Secrets, Woodpecker CI with BuildKit, and a private Zot registry.
+  \item Runs Forgejo, Matrix (Conduit + Element), Vaultwarden, and a WireGuard/NetBird mesh; observability with VictoriaMetrics, VictoriaLogs, Grafana, and alerts bridged to Matrix.
+\end{itemize}
+
+\projentry{pendaftaran-uib}{University registration system --- team of 4; primary developer (about 146 of 238 commits)}{Feb 2026 -- Jun 2026}
+\begin{itemize}
+  \item Full-stack: Next.js 16/React 19 frontend, Go (Chi) REST API, MySQL with migrations, and MongoDB-backed JWT revocation.
+  \item Security and operations: encrypted NIK fields, Cloudflare Turnstile verification, ClamAV scanning of uploads; Docker/Podman Compose for the whole stack.
+\end{itemize}
+
+\projentry{statistical-gadget-use}{Reproducible statistics pipeline and research paper (team project)}{Sep 2026}
+\begin{itemize}
+  \item Python pipeline (uv, Polars, SciPy, Matplotlib) computing descriptives, Cronbach's alpha, Pearson correlation, regression, t/F tests, normality, and probabilities, locked by 25 tests; generated all figures and LaTeX macros for the co-authored paper.
+\end{itemize}
+
+\cvsection{Education}
+
+\cventry{Bachelor of Information Technology}{Universitas Internasional Batam}{Batam, Indonesia}{2025 -- Expected 2029}
+\textit{GPA: 3.70/4.00 (term 1: 3.68, term 2: 3.72). Coursework: Programming, Databases, Networks, Computer Architecture, HCI, Cybersecurity.}
+
+\cvsection{Certifications}
+
+\begin{itemize}
+  \item \textbf{Cisco Networking Academy (2024--2026):} Networking Basics; Introduction to Cybersecurity; Python Essentials 1 \& 2; JavaScript Essentials 1 \& 2; HTML \& CSS Essentials; Linux Essentials and Linux Unhatched.
+  \item \textbf{KodeKloud (2026):} Docker Training Course for the Absolute Beginner; Crash Course: Docker for Absolute Beginners; Crash Course: Linux for Absolute Beginners.
+\end{itemize}
+
+\cvsection{Languages}
+
+\textbf{Indonesian:} native $\cdot$ \textbf{English:} professional (TOEIC 920) $\cdot$ \textbf{Mandarin:} HSK 4 $\cdot$ \textbf{Japanese:} A1 (kana, basic kanji)
+
+\end{document}
