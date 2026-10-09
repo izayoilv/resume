@@ -1,6 +1,6 @@
-# CV — Vincent Yongky Pratama
+# Resume — Vincent Yongky Pratama
 
-Single-page, ATS-friendly CV in LaTeX (LuaLaTeX, TeX Gyre Heros).
+Single-page, ATS-friendly resume in LaTeX (LuaLaTeX, TeX Gyre Heros).
 Single column, standard headings, no tables or graphics.
 
 ## Build
@@ -9,12 +9,12 @@ Single column, standard headings, no tables or graphics.
 latexmk
 ```
 
-Output: `Vincent_Yongky_Pratama_CV.pdf`.
+Output: `Vincent_Yongky_Pratama_Resume.pdf`.
 
 ## ATS check
 
 ```bash
-pdftotext Vincent_Yongky_Pratama_CV.pdf - | head -40
+pdftotext Vincent_Yongky_Pratama_Resume.pdf - | head -40
 ```
 
 Every field must be selectable text, in reading order.

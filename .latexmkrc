@@ -1,3 +1,3 @@
 $pdf_mode = 4;
-@default_files = ('cv.tex');
-$jobname = 'Vincent_Yongky_Pratama_CV';
+@default_files = ('resume.tex');
+$jobname = 'Vincent_Yongky_Pratama_Resume';
