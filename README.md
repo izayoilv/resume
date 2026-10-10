@@ -14,10 +14,13 @@ Output: `Vincent_Yongky_Pratama_Resume.pdf`.
 ## ATS check
 
 ```bash
-pdftotext Vincent_Yongky_Pratama_Resume.pdf - | head -40
+./ats-check.sh
 ```
 
-Every field must be selectable text, in reading order.
+Verifies extraction of contacts, section headings, and key terms, plus:
+single page, no embedded images, embedded fonts, fresh PDF (not stale
+relative to `resume.tex`). Also installed as a pre-commit hook, so a
+broken or outdated PDF cannot be committed.
 
 ---
 

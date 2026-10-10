@@ -8,3 +8,11 @@ repos:
       - id: check-merge-conflict
       - id: mixed-line-ending
         args: [--fix=lf]
+  - repo: local
+    hooks:
+      - id: ats-check
+        name: ATS parse check (resume PDF)
+        entry: ./ats-check.sh
+        language: system
+        pass_filenames: false
+        files: ^(resume\.tex|Vincent_Yongky_Pratama_Resume\.pdf)$
